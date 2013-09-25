@@ -64,7 +64,8 @@ public class PrimeNumbersFinder {
 		boolean prime = true;
 		for (int number = 2; number <= limit; number++) {
 			prime = true;
-			for (int i = 2; i < number; i++)
+			int maxCheck = (int) Math.sqrt(number);
+			for (int i = 2; i < maxCheck; i++)
 				if (number % i == 0) {
 					prime = false;
 					break;
